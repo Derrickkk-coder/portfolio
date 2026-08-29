@@ -24,7 +24,7 @@ export const profile = {
   email: 'akwaboahderrick1@gmail.com',
   resumeUrl: '/resume.pdf',
   socials: {
-    github: '#', // TODO: add GitHub profile URL
+    github: 'https://github.com/Derrickkk-coder',
     linkedin: 'https://www.linkedin.com/in/derrick-akwaboah-453451310/',
     twitter: '#',
     instagram: '#',
