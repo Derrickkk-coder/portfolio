@@ -19,7 +19,7 @@ export default function Hero() {
             <a href="#projects" className="btn btn-primary">
               View My Work <FiArrowRight />
             </a>
-            <a href={profile.resumeUrl} className="btn btn-outline">
+            <a href={profile.resumeUrl} className="btn btn-outline" download>
               Download CV <FiDownload />
             </a>
           </div>
@@ -39,27 +39,7 @@ export default function Hero() {
           <div className="hero__dots" />
 
           <div className="hero__photo">
-            <img src="/profile.png" alt={profile.name} />
-          </div>
-
-          <div className="hero__code-card hero__code-card--float">
-            <div className="hero__code-bar">
-              <span className="dot dot--red" />
-              <span className="dot dot--yellow" />
-              <span className="dot dot--green" />
-              <span className="hero__code-title">developer.js</span>
-            </div>
-            <pre className="hero__code-body">
-{`const developer = {
-  name: "${profile.firstName}",
-  skills: [
-    "React", "Node.js",
-    "TypeScript"
-  ],
-  passion: "Building for
-            the web"
-};`}
-            </pre>
+            <img src="/profile.jpg" alt={profile.name} />
           </div>
 
           <div className="hero__badge">

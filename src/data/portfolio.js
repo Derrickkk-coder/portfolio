@@ -22,7 +22,7 @@ export const profile = {
   aboutBody:
     'With hands-on experience across the stack, I help businesses and individuals bring their ideas to life through clean, efficient, and well-structured code.',
   email: 'akwaboahderrick1@gmail.com',
-  resumeUrl: '#', // TODO: add your resume PDF to /public and update this path
+  resumeUrl: '/resume.pdf',
   socials: {
     github: '#', // TODO: add GitHub profile URL
     linkedin: 'https://www.linkedin.com/in/derrick-akwaboah-453451310/',
