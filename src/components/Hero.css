@@ -58,7 +58,7 @@
 }
 
 .hero__stack-icons svg:hover {
-  color: var(--accent-2);
+  color: var(--accent-warm);
   transform: translateY(-3px);
 }
 

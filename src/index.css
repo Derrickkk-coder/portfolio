@@ -11,6 +11,7 @@
   --accent-1: #7c5cff;
   --accent-2: #b366ff;
   --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  --accent-warm: #f5a623;
   --font-heading: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --radius: 16px;
