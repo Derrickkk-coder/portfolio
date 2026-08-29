@@ -15,9 +15,9 @@ export const profile = {
   name: 'Derrick Akwaboah',
   firstName: 'Derrick',
   role: 'I’M A SOFTWARE ENGINEER',
-  headline: 'I build things for the web.',
+  headline: 'I craft clean, reliable software.',
   tagline:
-    'I’m a passionate software developer specializing in building exceptional digital experiences with modern technologies.',
+    'I’m a software engineer who enjoys turning ideas into fast, well-built applications — from the first line of code to the final deploy.',
   aboutHeading: 'I’m passionate about creating digital solutions',
   aboutBody:
     'With hands-on experience across the stack, I help businesses and individuals bring their ideas to life through clean, efficient, and well-structured code.',
