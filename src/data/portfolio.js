@@ -9,7 +9,7 @@ import {
   SiTailwindcss,
   SiGit,
 } from 'react-icons/si'
-import { FiCalendar, FiCode, FiSmile, FiAward } from 'react-icons/fi'
+import { FiCalendar, FiCode, FiSmile, FiAward, FiBookOpen } from 'react-icons/fi'
 
 export const profile = {
   name: 'Derrick Akwaboah',
@@ -36,6 +36,17 @@ export const stats = [
   { icon: FiCode, value: '10+', label: 'Projects Completed' },
   { icon: FiSmile, value: '5+', label: 'Happy Clients' },
   { icon: FiAward, value: '100%', label: 'Client Satisfaction' },
+]
+
+export const timeline = [
+  {
+    id: 1,
+    type: 'education',
+    icon: FiBookOpen,
+    title: 'BSc in Information Technology',
+    place: 'University of Ghana, Legon',
+    period: '2022 — 2026',
+  },
 ]
 
 export const techStack = [SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, SiNodedotjs]
