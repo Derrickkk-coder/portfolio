@@ -65,7 +65,7 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: 'QuizMe',
+    title: 'EduQuiz',
     description: 'An interactive quiz platform built to help users learn, practice, and track their improvement across topics.',
     tags: ['React', 'Next.js'],
     link: 'https://eduquiz-innovate-x4.vercel.app/',
