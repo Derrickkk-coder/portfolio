@@ -14,10 +14,9 @@ export default function Projects() {
         <div className="case-studies">
           {projects.map((project, i) => (
             <article className="case-study" key={project.id}>
-              <div
-                className={`case-study__thumb ${project.image ? '' : `thumb-${(i % 4) + 1}`}`}
-                style={project.image ? { backgroundImage: `url(${project.image})` } : undefined}
-              />
+              <div className={`case-study__thumb ${project.image ? '' : `thumb-${(i % 4) + 1}`}`}>
+                {project.image && <img src={project.image} alt={`${project.title} preview`} loading="lazy" />}
+              </div>
 
               <div className="case-study__body">
                 <h3>{project.title}</h3>

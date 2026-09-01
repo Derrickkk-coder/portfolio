@@ -20,10 +20,18 @@
 }
 
 .case-study__thumb {
-  background-size: cover;
-  background-position: top center;
+  max-width: 100%;
+  overflow: hidden;
   background-color: var(--surface-2);
-  min-height: 260px;
+}
+
+.case-study__thumb img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .thumb-1 { background: linear-gradient(135deg, #1d3a8f, #3b82f6); }
