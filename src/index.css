@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #090b14;
-  --bg-alt: #0c0f1c;
-  --surface: #121629;
-  --surface-2: #171c33;
+  --bg: #0d0f12;
+  --bg-alt: #101317;
+  --surface: #15191e;
+  --surface-2: #1b2027;
   --border: rgba(255, 255, 255, 0.08);
-  --text: #eef0f8;
-  --text-muted: #9aa0bd;
-  --accent-1: #7c5cff;
-  --accent-2: #b366ff;
+  --text: #f3f4f6;
+  --text-muted: #9aa3af;
+  --accent-1: #3b82f6;
+  --accent-2: #60a5fa;
   --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  --accent-warm: #f5a623;
+  --accent-warm: #10b981;
   --font-heading: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --radius: 16px;
@@ -80,8 +80,8 @@ img {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-2);
-  background: rgba(124, 92, 255, 0.12);
-  border: 1px solid rgba(124, 92, 255, 0.25);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   padding: 6px 14px;
   border-radius: 999px;
   margin-bottom: 16px;
@@ -114,11 +114,11 @@ img {
 .btn-primary {
   background: var(--accent-gradient);
   color: #fff;
-  box-shadow: 0 8px 24px -8px rgba(124, 92, 255, 0.65);
+  box-shadow: 0 8px 24px -8px rgba(59, 130, 246, 0.65);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 12px 28px -8px rgba(124, 92, 255, 0.8);
+  box-shadow: 0 12px 28px -8px rgba(59, 130, 246, 0.8);
   transform: translateY(-2px);
 }
 
@@ -130,7 +130,7 @@ img {
 
 .btn-outline:hover {
   border-color: var(--accent-1);
-  background: rgba(124, 92, 255, 0.08);
+  background: rgba(59, 130, 246, 0.08);
 }
 
 section {

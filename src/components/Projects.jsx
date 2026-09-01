@@ -1,4 +1,4 @@
-import { FiArrowUpRight } from 'react-icons/fi'
+import { FiArrowUpRight, FiGithub } from 'react-icons/fi'
 import { projects } from '../data/portfolio'
 import './Projects.css'
 
@@ -11,34 +11,52 @@ export default function Projects() {
           <h2>Some of My Recent Work</h2>
         </div>
 
-        <div className="projects__grid">
+        <div className="case-studies">
           {projects.map((project, i) => (
-            <a
-              href={project.link}
-              className="project-card"
-              key={project.id}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <article className="case-study" key={project.id}>
               <div
-                className={`project-card__thumb ${project.image ? '' : `thumb-${(i % 4) + 1}`}`}
+                className={`case-study__thumb ${project.image ? '' : `thumb-${(i % 4) + 1}`}`}
                 style={project.image ? { backgroundImage: `url(${project.image})` } : undefined}
-              >
-                <span className="project-card__index">{String(i + 1).padStart(2, '0')}</span>
-              </div>
-              <div className="project-card__body">
+              />
+
+              <div className="case-study__body">
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="project-card__tags">
+                <p className="case-study__tagline">{project.tagline}</p>
+
+                <div className="case-study__block">
+                  <span className="case-study__label">Problem</span>
+                  <p>{project.problem}</p>
+                </div>
+
+                <div className="case-study__block">
+                  <span className="case-study__label">Solution</span>
+                  <p>{project.solution}</p>
+                </div>
+
+                <ul className="case-study__features">
+                  {project.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+
+                <div className="case-study__tags">
                   {project.tags.map((tag) => (
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
-                <span className="project-card__link">
-                  View Project <FiArrowUpRight />
-                </span>
+
+                <div className="case-study__actions">
+                  <a href={project.link} target="_blank" rel="noreferrer" className="btn btn-primary">
+                    Live Demo <FiArrowUpRight />
+                  </a>
+                  {project.repo && (
+                    <a href={project.repo} target="_blank" rel="noreferrer" className="btn btn-outline">
+                      GitHub Repo <FiGithub />
+                    </a>
+                  )}
+                </div>
               </div>
-            </a>
+            </article>
           ))}
         </div>
       </div>

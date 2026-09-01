@@ -21,6 +21,12 @@
   max-width: 460px;
 }
 
+.about__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
 .about__stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -75,6 +81,9 @@
   .about__text p {
     margin-left: auto;
     margin-right: auto;
+  }
+  .about__actions {
+    justify-content: center;
   }
 }
 

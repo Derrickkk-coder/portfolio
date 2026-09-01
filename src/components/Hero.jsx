@@ -1,4 +1,4 @@
-import { FiArrowRight, FiDownload } from 'react-icons/fi'
+import { FiArrowRight, FiMail } from 'react-icons/fi'
 import { profile, techStack } from '../data/portfolio'
 import './Hero.css'
 
@@ -7,20 +7,22 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="container hero__inner">
         <div className="hero__content">
-          <span className="eyebrow">{profile.role}</span>
-          <h1>
-            Hi, I’m <span className="gradient-text">{profile.firstName}</span>
-            <br />
-            {profile.headline}
-          </h1>
-          <p className="hero__tagline">{profile.tagline}</p>
+          <h1 className="hero__name">{profile.name}</h1>
+          <p className="hero__role">{profile.role}</p>
+
+          <div className="hero__availability">
+            <span className="hero__availability-dot" />
+            {profile.availability}
+          </div>
+
+          <p className="hero__tagline">{profile.headline}</p>
 
           <div className="hero__actions">
             <a href="#projects" className="btn btn-primary">
-              View My Work <FiArrowRight />
+              View My Projects <FiArrowRight />
             </a>
-            <a href={profile.resumeUrl} className="btn btn-outline" download>
-              Download CV <FiDownload />
+            <a href="#contact" className="btn btn-outline">
+              Let's Talk <FiMail />
             </a>
           </div>
 
@@ -40,11 +42,6 @@ export default function Hero() {
 
           <div className="hero__photo">
             <img src="/profile.jpg" alt={profile.name} />
-          </div>
-
-          <div className="hero__badge">
-            <span className="hero__badge-dot" />
-            Available for work
           </div>
         </div>
       </div>

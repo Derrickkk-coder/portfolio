@@ -1,4 +1,4 @@
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight, FiDownload } from 'react-icons/fi'
 import { profile, stats } from '../data/portfolio'
 import './About.css'
 
@@ -10,9 +10,14 @@ export default function About() {
           <span className="eyebrow">About Me</span>
           <h2>{profile.aboutHeading}</h2>
           <p>{profile.aboutBody}</p>
-          <a href="#contact" className="btn btn-outline">
-            Learn More About Me <FiArrowRight />
-          </a>
+          <div className="about__actions">
+            <a href="#contact" className="btn btn-outline">
+              Learn More About Me <FiArrowRight />
+            </a>
+            <a href={profile.resumeUrl} className="btn btn-outline" download>
+              Download CV <FiDownload />
+            </a>
+          </div>
         </div>
 
         <div className="about__stats">
