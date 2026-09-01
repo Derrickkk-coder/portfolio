@@ -93,7 +93,7 @@ export const projects = [
     ],
     tags: ['React', 'Next.js'],
     link: 'https://eduquiz-innovate-x4.vercel.app/',
-    repo: '',
+    repo: 'https://github.com/Derrickkk-coder/quizme',
     image: '/projects/quizme.png',
   },
   {
@@ -112,7 +112,7 @@ export const projects = [
     ],
     tags: ['React', 'Next.js', 'Node.js'],
     link: 'https://final-year-project-11136525-up6r.vercel.app/',
-    repo: '',
+    repo: 'https://github.com/Derrickkk-coder/Final-year-project---11136525',
     image: '/projects/nextleap.png',
   },
   {

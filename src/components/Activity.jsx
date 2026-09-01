@@ -1,8 +1,37 @@
-import { FiCode, FiGithub, FiArrowUpRight } from 'react-icons/fi'
+import { useEffect, useState } from 'react'
+import { FiCode, FiGithub, FiArrowUpRight, FiStar, FiGitBranch } from 'react-icons/fi'
 import { profile } from '../data/portfolio'
 import './Activity.css'
 
 export default function Activity() {
+  const [repos, setRepos] = useState(null)
+  const [failed, setFailed] = useState(false)
+
+  useEffect(() => {
+    let cancelled = false
+
+    fetch(`https://api.github.com/users/${profile.githubUsername}/repos?sort=updated&per_page=10`)
+      .then((res) => {
+        if (!res.ok) throw new Error('GitHub API request failed')
+        return res.json()
+      })
+      .then((data) => {
+        if (cancelled) return
+        const top = data
+          .filter((r) => !r.fork)
+          .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+          .slice(0, 3)
+        setRepos(top)
+      })
+      .catch(() => {
+        if (!cancelled) setFailed(true)
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
   return (
     <section id="activity" className="activity">
       <div className="container">
@@ -36,6 +65,37 @@ export default function Activity() {
             </a>
           </div>
         </div>
+
+        {!failed && (
+          <div className="repo-list">
+            {repos === null
+              ? Array.from({ length: 3 }).map((_, i) => <div className="repo-card repo-card--skeleton" key={i} />)
+              : repos.map((repo) => (
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="repo-card"
+                    key={repo.id}
+                  >
+                    <div className="repo-card__head">
+                      <FiGithub />
+                      <span className="repo-card__name">{repo.name}</span>
+                    </div>
+                    <p className="repo-card__desc">{repo.description || 'No description provided.'}</p>
+                    <div className="repo-card__meta">
+                      {repo.language && <span className="repo-card__lang">{repo.language}</span>}
+                      <span>
+                        <FiStar /> {repo.stargazers_count}
+                      </span>
+                      <span>
+                        <FiGitBranch /> {repo.forks_count}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+          </div>
+        )}
       </div>
     </section>
   )
