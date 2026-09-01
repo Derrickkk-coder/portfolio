@@ -68,7 +68,7 @@ export const projects = [
     title: 'QuizMe',
     description: 'An interactive quiz platform built to help users learn, practice, and track their improvement across topics.',
     tags: ['React', 'Next.js'],
-    link: 'https://quizme-wheat.vercel.app/',
+    link: 'https://eduquiz-innovate-x4.vercel.app/',
     image: '/projects/quizme.png',
   },
   {
