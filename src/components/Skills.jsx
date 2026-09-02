@@ -17,7 +17,7 @@ export default function Skills() {
               <div className="tech-category__items">
                 {items.map(({ name: toolName, icon: Icon }) => (
                   <span className="tech-chip" key={toolName}>
-                    <Icon /> {toolName}
+                    <Icon aria-hidden="true" focusable="false" /> {toolName}
                   </span>
                 ))}
               </div>

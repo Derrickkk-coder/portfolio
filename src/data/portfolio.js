@@ -49,7 +49,14 @@ export const timeline = [
   },
 ]
 
-export const techStack = [SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact, SiNodedotjs]
+export const techStack = [
+  { name: 'HTML5', icon: SiHtml5 },
+  { name: 'CSS3', icon: SiCss },
+  { name: 'JavaScript', icon: SiJavascript },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'React', icon: SiReact },
+  { name: 'Node.js', icon: SiNodedotjs },
+]
 
 export const techCategories = [
   {
@@ -94,7 +101,7 @@ export const projects = [
     tags: ['React', 'Next.js'],
     link: 'https://eduquiz-innovate-x4.vercel.app/',
     repo: 'https://github.com/Derrickkk-coder/quizme',
-    image: '/projects/quizme.png',
+    image: '/projects/quizme.jpg',
   },
   {
     id: 2,
@@ -113,7 +120,7 @@ export const projects = [
     tags: ['React', 'Next.js', 'Node.js'],
     link: 'https://final-year-project-11136525-up6r.vercel.app/',
     repo: 'https://github.com/Derrickkk-coder/Final-year-project---11136525',
-    image: '/projects/nextleap.png',
+    image: '/projects/nextleap.jpg',
   },
   {
     id: 3,
@@ -132,6 +139,6 @@ export const projects = [
     tags: ['React', 'Next.js', 'Shopify'],
     link: 'https://baabahanson.com/',
     repo: '',
-    image: '/projects/baabahanson.png',
+    image: '/projects/baabahanson.jpg',
   },
 ]

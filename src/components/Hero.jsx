@@ -29,8 +29,8 @@ export default function Hero() {
           <div className="hero__stack">
             <span>Technologies I work with</span>
             <div className="hero__stack-icons">
-              {techStack.map((Icon, i) => (
-                <Icon key={i} />
+              {techStack.map(({ name, icon: Icon }) => (
+                <Icon key={name} aria-label={name} title={name} />
               ))}
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="hero__dots" />
 
           <div className="hero__photo">
-            <img src="/profile.jpg" alt={profile.name} />
+            <img src="/profile.jpg" alt={profile.name} fetchPriority="high" />
           </div>
         </div>
       </div>
